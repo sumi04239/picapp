@@ -1,0 +1,16 @@
+<div class="header">
+    <div class="nav">
+      <ul>
+        <li><img src="#" alt="メインページ" title="メインページへ"></li>
+        <li class="head-btn1"><%= link_to "マイページ", root_path, class:"btn_link" %></li>
+        <li class="head-btn2"><%= link_to "商品ページ", root_path, class:"btn_link" %></li>
+        <li class="head-btn3"><%= link_to "相談ページ", root_path, class:"btn_link" %></li>
+        <%# if user_signed_in? %>
+          <li class="head-btn4"><%= link_to "ログアウト", root_path, class: "btn_link" %></li>
+        <% #else %>
+          <li class="head-btn5"><%= link_to "ログイン", root_path, class: "btn_link" %></li>
+          <li class= "head-btn6"><%= link_to "新規登録", root_path, class: "btn_link" %></li>
+        <%# end %>
+      </ul>
+    </div>
+  </div>

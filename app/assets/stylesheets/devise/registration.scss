@@ -1,0 +1,67 @@
+.devise-wrapper{
+  background-color: rgb(241, 225, 201);
+
+  .devise-main-content{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 15px;
+    
+
+    .signup-title,.login-title{
+      padding: 10px;
+
+      h2{
+        font-size: 30px;
+      }
+    }
+
+    .registrations-main, .sessions-main{
+
+      .field{
+        
+        .devise-label{
+          font-size: 15px;
+          font-weight: bold;
+          color: red;
+        }
+
+        .birth-box{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .birth-box>select{
+          width: 60px;
+          height: 50px;
+          margin: 10px 0 15px;
+        }
+          .devise-box{
+            width: 200px;
+            height: 30px;
+            padding: 10px;
+            margin: 10px 0 15px;
+            font-size: 20px;
+          }
+
+      }
+
+      .actions{
+        margin: 10px 0;
+        
+        .devise-submit{
+        font-size: 20px;
+        width: 200px;
+        height: 50px;
+        padding: 10px;
+        background-color: yellow;
+        }
+
+      }
+      
+    }
+
+  }
+
+}

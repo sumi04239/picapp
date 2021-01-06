@@ -1,20 +1,18 @@
-<div class="wrapper">
+<div class="album-wrapper">
 
   <%= render "shared/header" %>
 
-  <div class="main-pic">
-    <div class="main-baby-pic">
-
-    </div>
-  </div>
-  <div class="description">
-    アプリ説明
-  </div>
-
-  <!--写真欄（まだ一緒）-->
-  <div class="pics-introduction">
+  <!--写真欄-->
+  <div class="pics-introduction album-intro">
     <div class="pic-contents">
-      <h2 class="title">新規投稿作品</h2>
+      <h2 class="title">マイアルバム</h2>
+
+      <div class="new-contribution">
+        <div class="new-album-btn">
+          新しい写真を投稿する
+        </div>
+      </div>
+
       <ul class="pic-lists">
         <%#= "each" %>
           <li class="list">
@@ -56,6 +54,7 @@
       </ul>
     </div>
   </div>
+
 
   <%= render "shared/footer" %>
 

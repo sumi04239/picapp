@@ -1,0 +1,26 @@
+<div class="wrapper">
+
+<%= render "shared/header" %>
+
+<div class="advise-main-content">
+  <div class="advise-contribution">
+    <div class="new-advise-btn">
+      <%= link_to "相談を投稿する", new_album_path, class: "advise_link" %>
+    </div>
+
+    <div class="advise-lists">
+      <% @advises.each do |advise| %>
+        <div class="advise-text">
+          <%= link_to @advise.title, advise_path(@advise) %>
+        </div>
+      <% end %>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+<%= render "shared/footer" %>
+
+
+</div>

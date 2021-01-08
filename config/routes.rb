@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   resources :pics
   resources :albums
+  resources :advises
 end

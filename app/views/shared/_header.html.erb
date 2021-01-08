@@ -4,7 +4,7 @@
         <li class="head-btn0"><%= link_to image_tag("animalface_tanuki.png", size: '100x100', class: "btn_link"), root_path %></li>
         <li class="head-btn1"><%= link_to "マイページ", albums_path(current_user), class:"btn_link" %></li>
         <li class="head-btn2"><%= link_to "商品ページ", root_path, class:"btn_link" %></li>
-        <li class="head-btn3"><%= link_to "相談ページ", root_path, class:"btn_link" %></li>
+        <li class="head-btn3"><%= link_to "相談ページ", advises_path, class:"btn_link" %></li>
         <% if user_signed_in? %>
           <li class="head-btn4"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn_link" %></li>
         <% else %>

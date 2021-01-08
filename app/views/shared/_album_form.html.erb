@@ -1,0 +1,22 @@
+<div class="album-registrations-main">
+      <%= form_with model: @album, local: true do |f| %>
+
+        <%#= render 'shared/error_messages', model: f.object %>
+
+        <div class="album-field">
+          <label class="album-label">タイトル</label><br>
+          <%= f.text_field :title, class: "album-box" %>
+        </div>
+        <div class="album-field">
+          <label class="album-label">タイトル</label><br>
+          <%= f.file_field :image, class:"album-box" %>
+        </div>
+        <div class="album-field">
+          <label class="album-label">テキスト</label><br>
+          <%= f.text_field :text, class: "album-box" %>
+        </div>
+        <div class="album-field">
+          <%= f.submit "送信", class: "album-btn" %>
+        </div>
+      <% end %>
+    </div>

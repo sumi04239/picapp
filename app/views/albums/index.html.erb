@@ -1,4 +1,4 @@
-<div class="album-wrapper">
+<div class="wrapper">
 
   <%= render "shared/header" %>
 
@@ -16,7 +16,7 @@
       <ul class="pic-lists">
         <% @albums.each do |album| %>
           <li class="list">
-            <%= link_to "#" do %>
+            <%= link_to album_path(album) do %>
               <div class="pic-img-content">
                 <%= image_tag album.image, class: "pic-img" if album.image.attached? %>
               </div>

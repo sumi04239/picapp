@@ -1,0 +1,31 @@
+<div class="wrapper">
+
+<%= render "shared/second_header" %>
+
+<div class="album-each-content">
+  <ul class="each-lists">
+          <li class="eachlist">
+              <div class="each-img-content">
+                <%= image_tag @album.image, class: "each-img" if @album.image.attached? %>
+              </div>
+              <div class="each-info">
+                <div class="each-title">
+                  <p><%= @album.created_at %></p>
+                  <h3><%= @album.title %></h3>
+                </div>
+                <div class="each-text">
+                  <div class="each-text">
+                    <p><%= @album.text %></p>
+                  </div>
+                  <div class="each-btn">
+                    <%= link_to "編集をする", edit_album_path(@album) %>
+                  </div>
+                </div>
+              </div>
+          </li>
+        
+</div>
+
+<%= render "shared/second_footer" %>
+
+</div>

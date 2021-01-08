@@ -9,31 +9,31 @@
 
       <div class="new-contribution">
         <div class="new-album-btn">
-          新しい写真を投稿する
+          <%= link_to "新規写真を投稿する", new_album_path %>
         </div>
       </div>
 
       <ul class="pic-lists">
-        <%#= "each" %>
+        <% @albums.each do |album| %>
           <li class="list">
-            <%#= link_to "#" do %>
+            <%= link_to "#" do %>
               <div class="pic-img-content">
-                <%#= image_tag "#", class: "pic-img" #if pic.image.attached?# %>
+                <%= image_tag album.image, class: "pic-img" if album.image.attached? %>
               </div>
               <div class="pic-info">
                 <div class="pic-title">
-                  <p>日付</p>
-                  <h3>題名</h3>
+                  <p><%= album.created_at %></p>
+                  <h3><%= album.title %></h3>
                 </div>
                 <div class="pic-text">
                   <div class="text-box">
-                    <p>text</p>
+                    <p><%= album.text %></p>
                   </div>
                 </div>
               </div>
-            <%#= end %>
+            <% end %>
           </li>
-        <%#= end %>
+        <% end %>
         
         <li class="list">
           <div class="pic-img-content">
@@ -46,7 +46,7 @@
             </div>
             <div class="pic-text">
               <div class="text-box">
-                <p>テキストテキスト</p>
+                <p>ハイハイし始めた！！</p>
               </div>
             </div>
           </div>

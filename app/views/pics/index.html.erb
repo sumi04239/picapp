@@ -11,52 +11,16 @@
     アプリ説明
   </div>
 
-  <!--写真欄（まだ一緒）-->
+  <!--写真欄-->
   <div class="pics-introduction">
     <div class="pic-contents">
       <h2 class="title">新規投稿作品</h2>
-      <ul class="pic-lists">
-        <% @albums.each do |album| %>
-          <li class="list">
-            <%= link_to "#" do %>
-              <div class="pic-img-content">
-                <%= image_tag album.image, class: "pic-img" if album.image.attached? %>
-              </div>
-              <div class="pic-info">
-                <div class="pic-title">
-                  <p><%= album.created_at %></p>
-                  <h3><%= album.title %>/h3>
-                </div>
-                <div class="pic-text">
-                  <div class="text-box">
-                    <p><%= album.text %></p>
-                  </div>
-                </div>
-              </div>
-            <% end %>
-          </li>
-        <% end %>
-        
-        <li class="list">
-          <div class="pic-img-content">
-            <%= image_tag "camera_baby_mother.png", class: "pic-img" %>
-          </div>
-          <div class="pic-info">
-            <div class="pic-title">
-              <p>2021-01-04 07:22:44</p>
-              <b>写真を投稿してね！</b>
-            </div>
-            <div class="pic-text">
-              <div class="text-box">
-                <p>はいはいし始めた！！</p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
+    
+  
+      <%= render "shared/bulletin_form" %>
     </div>
   </div>
 
-  <%= render "shared/footer" %>
-
+    <%= render "shared/footer" %>
+  
 </div>

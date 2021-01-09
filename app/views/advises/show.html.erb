@@ -1,18 +1,21 @@
-<div class="wrapper">
+<div class="advise-wrapper">
 
   <%= render "shared/second_header" %>
 
-  <div class="advise-show-content">
-    <ul class="advise-lists">
-      <li class="adviselist">
-        <div class="advise-title">
+  <div class="advise-main-content advise-show">
+
+  <div class="advise-title">
           <%= @advise.title %>
         </div>
         <div class="advise-text">
           <%= @advise.text %>
         </div>
-      </li>
-    </ul>
+
+    <div class="advise-lists">
+      <div class="adviselist">
+        
+      </div>
+    </div>
   </div>
 
   <%= render "shared/second_footer" %>

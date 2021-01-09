@@ -4,11 +4,13 @@
     justify-content: center;
     
   .album-field{
+    display: flex;
+    flex-direction: column;
     .album-label{
       font-size: 20px;
       font-weight: bold;
       text-align: center;
-      color: rgb(42, 133, 42);
+      color: rgb(227, 114, 15);
     }
 
     .album-box{
@@ -16,6 +18,25 @@
       height: 50px;
       margin: 15px;
     }
+
+    .album-box{
+      width: 250px;
+      height: 50px;
+      margin: 15px;
+    }
+
+    .album-bottom{
+      display: flex;
+      justify-content: center;
+      
+      .album-btn{
+        width: 250px;
+        height: 50px;
+        margin: 15px;
+        color: white;
+        background-color: rgb(218, 16, 2);
+        border-radius: 15px;
+      }
+  }
   }
 }
-

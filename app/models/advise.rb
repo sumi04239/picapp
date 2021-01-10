@@ -3,7 +3,7 @@ class Advise < ApplicationRecord
   has_many :answer
 
   with_options presence: true do
-    validates :title
-    validates :text
+    validates :title, length: { minimum: 10 }
+    validates :text, length: { minimum: 10 }
   end
 end

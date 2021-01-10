@@ -2,8 +2,9 @@
 
 <div class="album-registrations-main">
       <%= form_with model: @album, local: true do |f| %>
-
-        <%#= render 'shared/error_messages', model: f.object %>
+        
+        <%= render 'shared/error_messages', model: f.object %>
+        
 
         <div class="album-field">
           <label class="album-label">タイトル</label><br>

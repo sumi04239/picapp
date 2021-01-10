@@ -13,6 +13,9 @@
     <div class="advise-answer-content">
       <% if current_user %>
         <%= form_with(model: [@advise, @answer], local: true) do |f| %>
+
+          <%= render 'shared/error_messages', model: f.object %>
+
           <div class="advise-answer-box">
             <%= f.text_area :text, placeholder: "コメントする", rows: "2", class:"answer-box" %>
           </div>

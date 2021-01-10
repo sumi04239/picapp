@@ -1,8 +1,7 @@
 class AlbumsController < ApplicationController
-  def index
-    @albums = Album.all
-  end
-
+  before_action :set_item, only: [:show, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :edit]
+  
   def new
     @album = Album.new
   end
@@ -17,23 +16,25 @@ class AlbumsController < ApplicationController
   end
 
   def show
-    @album = Album.find(params[:id])
   end
 
   def edit
-    @album = Album.find(params[:id])
   end
 
   def update
-    album = Album.find(params[:id])
-     if album.update(album_params)
-      redirect_to albums_path()
+      if album.update(album_params)
+      redirect_to albums_path
     else
       render :edit
     end
   end
+
   private
   def album_params
     params.require(:album).permit(:title, :text, :image).merge(user_id: current_user.id)
+  end
+
+  def set_item
+    @album = Album.find(params[:id])
   end
 end

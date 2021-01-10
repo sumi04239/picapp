@@ -1,22 +1,33 @@
+<!--写真新規投稿、編集部分に使用-->
+
 <div class="album-registrations-main">
       <%= form_with model: @album, local: true do |f| %>
-
-        <%#= render 'shared/error_messages', model: f.object %>
+        
+        <%= render 'shared/error_messages', model: f.object %>
+        
 
         <div class="album-field">
           <label class="album-label">タイトル</label><br>
+          <div class="album-inside">
           <%= f.text_field :title, class: "album-box" %>
+          </div>
         </div>
         <div class="album-field">
-          <label class="album-label">画像</label><br>
-          <%= f.file_field :image, class:"album-box" %>
+          <label class="album-label">画像</label>
+          <div class="album-inside">
+            <%= f.file_field :image, class:"album-box" %>
+          </div>
         </div>
         <div class="album-field">
-          <label class="album-label">テキスト</label><br>
-          <%= f.text_field :text, class: "album-box" %>
+          <label class="album-label">テキスト</label>
+          <div class="album-inside">
+            <%= f.text_field :text, class: "album-box" %>
+          </div>
         </div>
         <div class="album-field">
-          <%= f.submit "送信", class: "album-btn" %>
+          <div class="album-bottom">
+              <%= f.submit "送信", class: "album-btn" %>
+            </div>
         </div>
       <% end %>
     </div>

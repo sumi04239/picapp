@@ -1,4 +1,6 @@
 class AdvisesController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
+
   def index
     @advises = Advise.all
   end
@@ -18,10 +20,13 @@ class AdvisesController < ApplicationController
 
   def show
     @advise = Advise.find(params[:id])
+    @answer = Answer.new
+    @answers = @advise.answer.includes(:user)
   end
 
   private
   def advise_params
     params.require(:advise).permit(:title, :text).merge(user_id: current_user.id)
   end
+
 end

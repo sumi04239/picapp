@@ -1,33 +1,36 @@
-<div class="wrapper">
+<div class="album-registrations-wrapper">
 
   <%= render "shared/second_header" %>
 
+  <!--相談投稿ページ-->
   <div class="album-main-content">
-
-  <div class="album-registrations-title">
-    <h2>相談を投稿する</h2>
-  </div>
-
-  <div class="album-registrations-main">
-      <%= form_with model: @advise, local: true do |f| %>
-
-        <%#= render 'shared/error_messages', model: f.object %>
-
-        <div class="album-field">
-          <label class="album-label">タイトル</label><br>
-          <%= f.text_field :title, class: "album-box" %>
+    <div class="album-content-box">
+      <div class="album-registrations-title">
+        <h2 class="title">相談を投稿する</h2>
+      </div>
+    
+      <div class="album-registrations-main">
+          <%= form_with model: @advise, local: true do |f| %>
+    
+            <%= render 'shared/error_messages', model: f.object %>
+    
+            <div class="album-field">
+              <label class="album-label">タイトル</label><br>
+              <%= f.text_field :title, class: "album-box" %>
+            </div>
+            <div class="album-field">
+              <label class="album-label">テキスト</label><br>
+              <%= f.text_field :text, class: "album-box" %>
+            </div>
+            <div class="album-field">
+              <div class="album-bottom">
+                  <%= f.submit "送信", class: "album-btn" %>
+                </div>
+            </div>
+          <% end %>
         </div>
-        <div class="album-field">
-          <label class="album-label">テキスト</label><br>
-          <%= f.text_field :text, class: "album-box" %>
-        </div>
-        <div class="album-field">
-          <%= f.submit "送信", class: "album-btn" %>
-        </div>
-      <% end %>
+  
+      </div>
     </div>
-
-    </div>
-
   <%= render "shared/second_footer" %>
 </div>

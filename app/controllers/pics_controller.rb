@@ -1,5 +1,12 @@
 class PicsController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
+
   def index
     @albums = Album.all
+  end
+
+  def show
+    user = User.find(params[:id])
+    @albums = user.albums
   end
 end

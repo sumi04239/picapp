@@ -1,11 +1,17 @@
+.advise-wrapper{
+
+  .advise-main-upper{
+    padding-top: 200px;
+  }
 .advise-main-content{
-  width: 80%;
+  width: 70%;
   height: 100%;
   margin: 0 auto;
-  padding-top: 200px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
 
   .advise-contribution{
     width: 100%;
@@ -15,26 +21,27 @@
       justify-content: center;
 
     .advise_link{
-      border: rgb(5, 2, 2) solid px;
-      box-shadow: 2px 5px 10px 1px #000000;
-      padding: 10px 100px;
-      margin-bottom: 50px;
-      border-radius: 10px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      background-color: forestgreen;
-      
+      background-color: rgb(80, 165, 80); 
     }
   }
 
   }
 
+  /* advise/index, show に使用*/
   .advise-lists{
     border: 8px solid rgb(157, 157, 157);
     width: 100%;
-    height: 300px;
     margin-bottom: 50px;
+    padding: 10px 50px;
+    
+    .advise-text{
+      margin: 20px 0;
+
+      .advise2_link{
+        color: black;
+      }
+    }
   }
   
+}
 }

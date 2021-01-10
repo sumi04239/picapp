@@ -1,18 +1,44 @@
-<div class="wrapper">
+<div class="advise-wrapper">
 
   <%= render "shared/second_header" %>
 
-  <div class="advise-show-content">
-    <ul class="advise-lists">
-      <li class="adviselist">
-        <div class="advise-title">
-          <%= @advise.title %>
-        </div>
-        <div class="advise-text">
-          <%= @advise.text %>
-        </div>
-      </li>
-    </ul>
+  <!--相談詳細ページ-->
+  <div class="advise-main-content advise-show">
+    <div class="advise-title">
+      <%= @advise.title %>
+    </div>
+    <div class="advise-text">
+      <%= @advise.text %>
+    </div>
+    <div class="advise-answer-content">
+      <% if current_user %>
+        <%= form_with(model: [@advise, @answer], local: true) do |f| %>
+
+          <%= render 'shared/error_messages', model: f.object %>
+
+          <div class="advise-answer-box">
+            <%= f.text_area :text, placeholder: "コメントする", rows: "2", class:"answer-box" %>
+          </div>
+          <%= f.submit "送信する", class: "advise-answer-btn btn" %>
+        <% end %>
+      <% else %>
+        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>
+        </strong>
+      <% end %>
+    </div>
+    <div class="advise-lists">
+      <div class="adviselist">
+        <h4>＜コメント一覧></h4>
+        <% if @answers %>
+          <% @answers.each do |answer| %>
+            <p>
+              <strong><%= answer.user.nickname %> : </strong>
+              <%= answer.text %>
+            </p>
+          <% end %>
+        <% end %>        
+      </div>
+    </div>
   </div>
 
   <%= render "shared/second_footer" %>

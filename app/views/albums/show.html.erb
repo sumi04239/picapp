@@ -2,6 +2,7 @@
 
 <%= render "shared/second_header" %>
 
+<!--写真詳細ページ-->
 <div class="album-each-content">
   <ul class="each-lists">
     <li class="eachlist">
@@ -17,9 +18,11 @@
             <div class="each-text">
               <p><%= @album.text %></p>
             </div>
-            <div class="each-btn">
-              <%= link_to "編集をする", edit_album_path(@album) %>
-            </div>
+            <% if user_signed_in? && current_user.id == @album.user.id %>
+              <div class="each-btn">
+                <%= link_to "編集をする", edit_album_path(@album), class: "album-edit-btn btn" %>
+              </div>
+            <% end %>
           </div>
         </div>
     </li>

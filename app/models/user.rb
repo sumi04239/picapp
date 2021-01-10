@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :albums
   has_many :advises
+  has_many :answers
 
   with_options presence: true do
     validates :nickname

@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pics#index'
 
-  resources :pics
   resources :albums
-  resources :advises
+  resources :pics
+  resources :advises do
+    resources :answers
+  end
+  resources :user
+
 end

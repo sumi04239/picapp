@@ -18,6 +18,8 @@ class AdvisesController < ApplicationController
 
   def show
     @advise = Advise.find(params[:id])
+    @answer = Answer.new
+    @answers = @advise.answer.includes(:user)
   end
 
   private

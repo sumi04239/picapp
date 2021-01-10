@@ -2,18 +2,18 @@
 
   <%= render "shared/header" %>
 
-  <!--写真欄-->
+  <!--マイページ 写真欄-->
   <div class="pics-introduction album-intro">
     <div class="pic-contents">
       <h2 class="title">マイアルバム</h2>
-
       <div class="new-contribution">
         <div class="new-album-btn">
           <%= link_to "新規写真を投稿する", new_album_path, class: "album_link_btn btn" %>
         </div>
       </div>
 
-      <%= render "shared/bulletin_form" %>
+        <%= render "shared/bulletin_form" %>
+      
     </div>
   </div>
 

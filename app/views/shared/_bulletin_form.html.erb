@@ -1,4 +1,4 @@
-<!--写真欄-->
+<!--（写真欄）トップページの一覧部分とマイページの一覧ページに使用-->
 
       <ul class="pic-lists">
         <% @albums.each do |album| %>
@@ -22,22 +22,25 @@
           </li>
         <% end %>
         
-        <li class="list">
-          <div class="pic-img-content">
-            <%= image_tag "camera_baby_mother.png", class: "pic-img" %>
-          </div>
-          <div class="pic-info">
-            <div class="pic-title">
-              <p>2021-01-04 07:22:44</p>
-              <b>写真を投稿してね！</b>
+        <!--ダミー部分-->
+        <% if @albums.empty? %>
+          <li class="list">
+            <div class="pic-img-content">
+              <%= image_tag "camera_baby_mother.png", class: "pic-img" %>
             </div>
-            <div class="pic-text">
-              <div class="text-box">
-                <p>はいはいし始めた！！</p>
+            <div class="pic-info">
+              <div class="pic-title">
+                <p>2021-01-04 07:22:44</p>
+                <b>写真を投稿してね！</b>
+              </div>
+              <div class="pic-text">
+                <div class="text-box">
+                  <p>はいはいし始めた！！</p>
+                </div>
               </div>
             </div>
-          </div>
-        </li>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

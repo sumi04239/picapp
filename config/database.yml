@@ -53,3 +53,4 @@ production:
   database: picapp_production
   username: picapp
   password: <%= ENV['PICAPP_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock

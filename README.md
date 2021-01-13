@@ -23,7 +23,7 @@
  - マイページから写真を新規投稿
  - マイページの詳細から投稿内容を編集
  - 悩み相談ページで相談を投稿
- - 色々な人からアドバイスがもらる
+ - 色々な人からアドバイスをもらうことができる
  - 他の人の相談を閲覧しアドバイスができる
 
 ## 目指した課題解決
@@ -48,15 +48,15 @@
 
 ## 実装した機能についてのGIFと説明
 
-1. ログインをして入るとマイページとログアウトのボタンがついており、ログアウトを押すとログインボタンと新規登録ボタンに変わります。
+1. ログインをして入るとマイページとログアウトのボタンがついており、ログアウトを押すとログインボタンと新規登録ボタンに変わる。
 
 [![Image from Gyazo](https://i.gyazo.com/b36d4b226ea11f02674ee05a9c9fb849.gif)](https://gyazo.com/b36d4b226ea11f02674ee05a9c9fb849)
 
-2. 写真を投稿するとトップページに投稿されます。マイページでは現ユーザーの投稿したもののみが閲覧できます。
+2. 写真を投稿するとトップページに投稿されます。マイページでは現ユーザーの投稿したもののみが閲覧できる。
 
 [![Image from Gyazo](https://i.gyazo.com/67c54534c9a8b2a36eec16a937d65936.gif)](https://gyazo.com/67c54534c9a8b2a36eec16a937d65936)
 
-3. 相談内容を投稿できます。投稿したものは相談の一覧ページに表示され、クリックするとコメントを投稿できるようになています。
+3. 相談内容を投稿できます。投稿したものは相談の一覧ページに表示され、クリックするとコメントを投稿できるようになっている。
 
 [![Image from Gyazo](https://i.gyazo.com/b75fa54aed5eb4a3ac924d982572bd94.gif)](https://gyazo.com/b75fa54aed5eb4a3ac924d982572bd94)
 
@@ -126,20 +126,21 @@
 
 1. 
 
-```
+```ruby
+
 git clone https://github.com/sumi04239/picapp.git
 
 ```
 2. 
 
-```
+```ruby
 
 cd picapp
 
 ```
 3. 
 
-```
+```ruby
 
 bundle install
 
@@ -147,14 +148,16 @@ bundle install
 
 4. 
 
-```
+```ruby
+
 yarn install
 
 ```
 
 5. gemを追加
 
-```
+```ruby
+
 gem 'date_validator'
 gem 'devise'
 gem 'kaminari'
@@ -179,14 +182,15 @@ end
 
 6. 
 
-```
+```ruby
+
 bundle install
 
 ```
 
 7. 
 
-```
+```ruby
 
 rails db:create
 
@@ -194,7 +198,7 @@ rails db:create
 
 8. 
 
-```
+```ruby
 
 rails db:migrate
 
@@ -202,7 +206,7 @@ rails db:migrate
 
 9. 
 
-```
+```ruby
 
 rails s
 

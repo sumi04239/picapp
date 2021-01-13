@@ -1,6 +1,6 @@
 class Advise < ApplicationRecord
   belongs_to :user
-  has_many :answer
+  has_many :answer, dependent: :destroy
 
   with_options presence: true do
     validates :title, length: { minimum: 10 }

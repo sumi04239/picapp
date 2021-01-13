@@ -20,7 +20,12 @@
             </div>
             <% if user_signed_in? && current_user.id == @album.user.id %>
               <div class="each-btn">
+                <div>
                 <%= link_to "編集をする", edit_album_path(@album), class: "album-edit-btn btn" %>
+                </div>
+                <div class="album-bottom-btn">
+                <%= link_to "削除をする",  album_path(@album), method: :delete, class: "album-delete-btn btn" %>
+                </div>
               </div>
             <% end %>
           </div>

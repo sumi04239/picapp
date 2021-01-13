@@ -13,11 +13,6 @@ RSpec.describe Answer, type: :model do
     end
 
     context '相談に対するコメントを投稿できない' do
-      it 'コメントが10文字以上じゃないと投稿できない' do
-        @answer.text = 'aaa'
-        @answer.valid?
-        expect(@answer.errors.full_messages).to include("Text is too short (minimum is 10 characters)")
-      end
       it 'コメントが空だと投稿できない' do
         @answer.text = ' '
         @answer.valid?

@@ -47,23 +47,27 @@
 -
 
 ## 実装した機能についてのGIFと説明
+
 <br>
 
 1. ログインをして入るとマイページとログアウトのボタンがついており、ログアウトを押すとログインボタンと新規登録ボタンに変わります。
+
 <br>
 
 [![Image from Gyazo](https://i.gyazo.com/b36d4b226ea11f02674ee05a9c9fb849.gif)](https://gyazo.com/b36d4b226ea11f02674ee05a9c9fb849)
 
-
 <br>
+
 2. 写真を投稿するとトップページに投稿されます。マイページでは現ユーザーの投稿したもののみが閲覧できます。
+
 <br>
 
 [![Image from Gyazo](https://i.gyazo.com/9410fd83d2841ffebf56df305bec59b3.gif)](https://gyazo.com/9410fd83d2841ffebf56df305bec59b3)
 
-
 <br>
+
 3. 相談内容を投稿できます。投稿したものは相談の一覧ページに表示され、クリックするとコメントを投稿できるようになています。
+
 <br>
 
 [![Image from Gyazo](https://i.gyazo.com/b75fa54aed5eb4a3ac924d982572bd94.gif)](https://gyazo.com/b75fa54aed5eb4a3ac924d982572bd94)

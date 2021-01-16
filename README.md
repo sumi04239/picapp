@@ -237,4 +237,4 @@ rails s
 
 ## ER図
 
-[![Image from Gyazo](https://i.gyazo.com/1a06d14965c9c49911386ba8e64035bc.png)](https://gyazo.com/1a06d14965c9c49911386ba8e64035bc)
+[![Image from Gyazo](https://i.gyazo.com/0be60f1eb602bd571cc7cd7baf600859.png)](https://gyazo.com/0be60f1eb602bd571cc7cd7baf600859)

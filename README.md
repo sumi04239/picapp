@@ -237,4 +237,4 @@ rails s
 
 ## ER図
 
-![ER図](./ER図/オリアプ２.drawio"ER図")
+![ER図](https://gyazo.com/1a06d14965c9c49911386ba8e64035bc"ER図")

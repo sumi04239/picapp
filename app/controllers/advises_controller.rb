@@ -2,7 +2,7 @@ class AdvisesController < ApplicationController
   before_action :authenticate_user!, only: [:new]
 
   def index
-    @advises = Advise.all
+    @advises = Advise.page(params[:page])
   end
 
   def new

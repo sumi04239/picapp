@@ -1,0 +1,26 @@
+<div class="wrapper">
+
+  <%= render "shared/header" %>
+
+  <div class="pics-introduction search-content">
+    <div class="pic-contents">
+      <h2 class="title">検索結果</h2>
+
+      <div class="pic-search">
+        <%= form_with(url: search_albums_path, local: true, method: :get, class: "search-form") do |f| %>
+          <div class="search-inside">
+            <%= f.text_field :keyword, placeholder: "記事を検索する", class: "search-box" %>
+          </div>
+          <div class="search-inside">
+            <%= f.submit "検索", class: "search-btn btn" %>
+          </div>
+        <% end %>
+      </div>
+
+      <%= render "shared/bulletin_form" %>
+    </div>  
+  </div>
+  
+</div>
+  <%= render "shared/footer" %>
+</div>

@@ -6,6 +6,7 @@ class PicsController < ApplicationController
   end
 
   def show
+    albums = Album.all
     user = User.find(params[:id])
     @albums = user.albums
   end

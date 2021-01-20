@@ -37,6 +37,10 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def search
+    @albums = Album.search(params[:keyword])
+  end  
+
   private
   def album_params
     params.require(:album).permit(:title, :text, :image).merge(user_id: current_user.id)

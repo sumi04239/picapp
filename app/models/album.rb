@@ -8,4 +8,12 @@ class Album < ApplicationRecord
     validates :text, length: { minimum: 10 }
     validates :image
   end
+
+  def self.search(search)
+    if search !=""
+      Album.where('title LIKE(?)', "%#{search}%")
+    else
+      Album.all
+    end
+  end
 end

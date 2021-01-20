@@ -1,4 +1,4 @@
-/* pic/index, album/index,new, advise/new  */
+/* pic/index, album/index, new, search, advise/new  */
 .title{
   font-size: 50px;
   font-weight: bold;
@@ -34,6 +34,11 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        
+        
+        .list-link{
+          text-decoration: none;
+        }
 
         
         
@@ -63,9 +68,11 @@
             .text-box{
               width: 300px;
               height: 10vh;
-              padding: 5px;
+              padding-bottom: 15px;
               margin: 5px;
               background-color: white;
+              border: solid 7px rgba(160, 160, 160, 0.5);
+              border-radius: 10px;
             }
           
           }

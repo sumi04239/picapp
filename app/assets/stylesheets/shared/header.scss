@@ -1,87 +1,93 @@
-.header{
+.header {
   width: 100%;
   position: fixed;
   top: 0px;
   z-index: 20;
   background-color: rgb(254, 233, 205);
 
-  .nav{
+  .nav {
     margin: 0 auto;
     width: 80%;
 
-    ul{
+    p {
+      margin: 0;
+    }
+
+    ul {
       display: flex;
-      
-      li{
+      padding: 0;
+
+      li {
         list-style: none;
         width: 14%;
         height: 120px;
         color: white;
+        font-size: 16px;
         font-weight: bolder;
         text-decoration: none;
         text-align: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
       }
 
-      .head-btn0{
+      .head-btn0 {
         margin-top: 10px;
         width: 300px;
       }
 
-        .head-btn1{
-          background-image: image-url('animalface_duck.png');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: top center;
-          background-color: brown;
-        }
+      .head-btn1 {
+        background-color: brown;
+      }
 
-        .head-btn2{
-          background-image: image-url('animalface_ushi.png');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: top center;
-          background-color:  rgb(86, 202, 206);
-        }
+      .head-btn2 {
+        background-color: rgb(86, 202, 206);
+      }
 
-        .head-btn3{
-          background-image: image-url('animalface_saru.png');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: top center;
-          background-color: green;
-        }
+      .head-btn3 {
+        background-color: green;
+      }
 
-        .head-btn4{
-          background-image: image-url('animalface_risu.png');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: top center;
-          background-color: orange;
-        }
+      .head-btn4 {
+        background-color: orange;
+      }
 
-        .head-btn5{
-          background-image: image-url('animalface_zou.png');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: top center;
-          background-color: pink;
-        }
+      .head-btn5 {
+        background-color: pink;
+      }
 
-        .head-btn6{
-          background-image: image-url('animalface_kirin.png');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: top center;
-          background-color: rgb(82, 82, 145);
-        }
+      .head-btn6 {
+        background-color: rgb(82, 82, 145);
+      }
 
-        .btn_link{
-          text-decoration: none;
-          font-weight: bolder;
-          color: white;
-        }
-      
+      .btn_link {
+        text-decoration: none;
+        font-weight: bolder;
+        color: white;
+      }
     }
-    
+  }
+}
+
+@media (max-width: 600px) {
+  .nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  .head-btn0 {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    .nav {
+      width: 90%;
+      ul {
+        li {
+          width: 40%;
+        }
+      }
+    }
   }
 }

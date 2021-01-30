@@ -53,6 +53,7 @@
 - kaminariページネーション実装
 - 記事検索機能
 - ぱんくず機能実装
+- レスポンシブデザイン
 
 ## DEMO(実装した機能についてのGIFと説明)
 
@@ -111,7 +112,6 @@ df90c3ee294c910f3123012f7b4243353933c
 - 検索機能2 Ransack
 - (rspec追加)
 - 商品ページ作成
-- レスポンシブデザイン
 - ハッシュタグ機能
 
 
@@ -216,39 +216,7 @@ yarn install
 
 ```
 
-5. gemを追加
-
-```
-gem 'date_validator'
-gem 'devise'
-gem 'kaminari'
-gem 'pry-rails'
-gem 'rails-i18n'
-gem 'valid_email2'
-gem 'mini_magick'
-gem 'image_processing', '~>1.2'
-
-
-group :development, :test do
-  gem 'factory_bot_rails'
-  gem 'faker'
-  gem 'rspec-rails'
-end
-
-group :production do
-  gem 'rails_12factor'
-end
-
-```
-
-6. 
-
-```
-bundle install
-
-```
-
-7. 
+5. 
 
 ```
 
@@ -256,7 +224,7 @@ rails db:create
 
 ```
 
-8. 
+6. 
 
 ```
 
@@ -264,7 +232,7 @@ rails db:migrate
 
 ```
 
-9. 
+8. 
 
 ```
 

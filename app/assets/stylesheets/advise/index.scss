@@ -31,12 +31,14 @@
   /* advise/index, show に使用*/
   .advise-lists{
     border: 8px solid rgb(157, 157, 157);
-    width: 100%;
-    margin-bottom: 50px;
-    padding: 10px 0;
+    width: 70%;
+    margin: 0 auto 50px;
+    padding: 10px 20px;
     
     .advise-text{
       margin: 20px 0;
+      list-style: none;
+      padding: 0;
 
       .advise2_link{
         color: black;

@@ -19,7 +19,9 @@
           <div class="advise-answer-box">
             <%= f.text_area :text, placeholder: "コメントする", rows: "2", class:"answer-box" %>
           </div>
-          <%= f.submit "送信する", class: "advise-answer-btn btn" %>
+          <div class="advise-answer-buttom">
+            <%= f.submit "送信する", class: "advise-answer-btn btn" %>
+          </div>
         <% end %>
       <% else %>
         <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>

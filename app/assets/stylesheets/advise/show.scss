@@ -20,9 +20,14 @@
       border: solid 3px rgb(165, 165, 165);
     }
 
+    .advise-answer-buttom{
+      display: flex;
+      justify-content: center;
+    }
+
   .advise-answer-btn{
     background-color: orange;
-    margin: 15px 0 15px 25px;
+    margin: 15px auto 25px;
 
   }
 }

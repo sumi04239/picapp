@@ -8,3 +8,9 @@
       text-decoration: none;
       font-weight: bold;
 }
+
+@media (max-width: 600px) {
+  .btn {
+    padding: 10px 50px;
+  }
+}

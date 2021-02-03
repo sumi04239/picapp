@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_09_142340) do
+ActiveRecord::Schema.define(version: 2021_02_01_014843) do
 
   create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -68,6 +68,15 @@ ActiveRecord::Schema.define(version: 2021_01_09_142340) do
     t.index ["user_id"], name: "index_answers_on_user_id"
   end
 
+  create_table "likes", charset: "utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "album_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["album_id"], name: "index_likes_on_album_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "users", charset: "utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.date "birthday", null: false
@@ -88,4 +97,6 @@ ActiveRecord::Schema.define(version: 2021_01_09_142340) do
   add_foreign_key "albums", "users"
   add_foreign_key "answers", "advises"
   add_foreign_key "answers", "users"
+  add_foreign_key "likes", "albums"
+  add_foreign_key "likes", "users"
 end

@@ -1,7 +1,8 @@
 class AlbumsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_item, only: [ :show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit]
   
+
   def new
     @album = Album.new
   end
@@ -16,6 +17,7 @@ class AlbumsController < ApplicationController
   end
 
   def show
+    
   end
 
   def edit
@@ -23,7 +25,7 @@ class AlbumsController < ApplicationController
 
   def update
       if @album.update(album_params)
-      redirect_to "/pics/#{@album.id}"
+      redirect_to root_path
     else
       render :edit
     end

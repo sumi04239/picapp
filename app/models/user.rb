@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :albums, dependent: :destroy
   has_many :advises
   has_many :answers
+  has_many :likes
+  
 
   with_options presence: true do
     validates :nickname
@@ -14,6 +16,10 @@ class User < ApplicationRecord
     validates :email
     validates :birthday
     validates :password, format: { with: /\A[a-zA-Z0-9]+\z/, message: 'Password Include both letters and numbers' },
-                         length: { minimum: 6 }
+                          length: { minimum: 6 }
+  end
+  
+  def liked_by?(album_id)
+    likes.where(album_id: album_id).exists?
   end
 end

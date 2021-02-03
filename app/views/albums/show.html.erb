@@ -18,6 +18,23 @@
             <div class="each-text">
               <p><%= @album.text %></p>
             </div>
+            <div class="pic-likes">
+                <ul class="like-content">
+                  <% if current_user.liked_by?(@album.id) %>
+                    <li>
+                      <%= link_to destroy_like_path(@album), method: :delete, class: "like-link" do %>
+                        <%= icon('far', 'kiss-wink-heart', 'いいね!!', class: 'like-part2') %>：<%= @album.likes.count %>
+                      <% end %>
+                    </li>
+                  <% else %>
+                    <li>
+                      <%= link_to  create_like_path(@album), method: :post, class: "like-link" do %>
+                        <%= icon('far', 'meh-blank', 'いいねを押す', class: 'like-part')  %>：<%= @album.likes.count %>
+                      <% end %>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
             <% if user_signed_in? && current_user.id == @album.user.id %>
               <div class="each-btn">
                 <div>
@@ -37,3 +54,4 @@
 <%= render "shared/second_footer" %>
 
 </div>
+

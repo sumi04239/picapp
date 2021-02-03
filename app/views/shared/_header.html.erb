@@ -7,7 +7,7 @@
         <li class="head-btn2"><%= link_to image_tag("animalface_duck.png", size: '80x80', class: "btn_link"), root_path %><p>商品ページ</p></li>
         <li class="head-btn3"><%= link_to image_tag("animalface_ushi.png", size: '80x80', class: "btn_link"),advises_path %><p>相談ページ</p></li>
         <% if user_signed_in? %>
-          <li class="head-btn1"><%= link_to image_tag("animalface_saru.png", size: '80x80', class: "btn_link"), "/pics/#{current_user.id}", class:"btn_link" %><p><%= current_user.nickname  %></p></li>
+          <li class="head-btn1"><%= link_to image_tag("animalface_saru.png", size: '80x80', class: "btn_link"), "/users/#{current_user.id}", class:"btn_link" %><p><%= current_user.nickname  %></p></li>
           <li class="head-btn4"><%= link_to image_tag("animalface_risu.png", size: '80x80', class: "btn_link"), destroy_user_session_path, method: :delete %><p>ログアウト</p></li>
         <% else %>
           <li class="head-btn5"><%= link_to image_tag("animalface_zou.png", size: '80x80', class: "btn_link"), new_user_session_path %><p>ログイン</p></li>

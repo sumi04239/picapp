@@ -54,6 +54,7 @@
 - 記事検索機能
 - ぱんくず機能実装
 - レスポンシブデザイン
+- いいね機能の実装
 
 ## DEMO(実装した機能についてのGIFと説明)
 
@@ -91,7 +92,7 @@ df90c3ee294c910f3123012f7b4243353933c
 
 <br>
 
-4.検索機能：検索したいキーワードを入力するとそのキーワードについたtitleを検索することができます。
+4. 検索機能：検索したいキーワードを入力するとそのキーワードについたtitleを検索することができます。
 
 <br>
 
@@ -99,11 +100,17 @@ df90c3ee294c910f3123012f7b4243353933c
 
 <br>
 
-5.ぱんくず機能を使用し、現在いるであろうページの場所との確認を可能にて移動をしやすくしました。
+5. ぱんくず機能を使用し、現在いるであろうページの場所との確認を可能にて移動をしやすくしました。
 
 <br>
 
 [![Image from Gyazo](https://i.gyazo.com/11910569abb72fa69d7ed24b07c38729.gif)](https://gyazo.com/11910569abb72fa69d7ed24b07c38729)
+
+<br>
+
+6. 投稿の詳細ページにはいいね機能を実装しました
+
+[![Image from Gyazo](https://i.gyazo.com/8463f772225796611776fbd9f84a8db3.gif)](https://gyazo.com/8463f772225796611776fbd9f84a8db3)
 
 ## 実装予定の機能
 
@@ -117,11 +124,11 @@ df90c3ee294c910f3123012f7b4243353933c
 
 ## こだわった点
 
-- headerのボタン部分は可愛らしく出来るようつとめ、固定しスクロールしてもいつでも違うぺージに飛べるようにしました。
+- headerのボタン部分は固定しスクロールしてもいつでも違うぺージに飛べるようにしました。
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/69ba1c81be744fd955aff20039921add.png)](https://gyazo.com/69ba1c81be744fd955aff20039921add)
+[![Image from Gyazo](https://i.gyazo.com/b82130686ac6a2f036ebcd8deab9b7d6.gif)](https://gyazo.com/b82130686ac6a2f036ebcd8deab9b7d6)
 
 ログアウトをすると右側にログインと新規登録のボタンが出てきます。↓
 
@@ -150,6 +157,7 @@ df90c3ee294c910f3123012f7b4243353933c
 - has_many :albums
 - has_many :advises
 - has_many :answers
+- has_many :likes
 
 
 ### Albums
@@ -161,6 +169,8 @@ df90c3ee294c910f3123012f7b4243353933c
 | text           | text        | null:false            |
 
 - belongs_to :user
+- has_one_attached :image
+- has_many :likes
 
 
 ### Advises 
@@ -185,6 +195,16 @@ df90c3ee294c910f3123012f7b4243353933c
 - belongs_to :user
 - belongs_to :advise
 
+
+### likes
+
+|Column          |Type     |Options                |
+|----------------|---------|-----------------------|
+| user           | references | foreign_key: null|
+| advise         | references | foreign_key: null|
+
+belongs_to :user
+belongs_to :album
 
 ### ローカルでの動作方法
 
@@ -242,4 +262,4 @@ rails s
 
 ## ER図
 
-[![Image from Gyazo](https://i.gyazo.com/0be60f1eb602bd571cc7cd7baf600859.png)](https://gyazo.com/0be60f1eb602bd571cc7cd7baf600859)
+[![Image from Gyazo](https://i.gyazo.com/c1079562c2625b880513d2e2f09bac87.png)](https://gyazo.com/c1079562c2625b880513d2e2f09bac87)

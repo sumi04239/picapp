@@ -3,4 +3,7 @@ class PicsController < ApplicationController
     @albums = Album.all.order(created_at: :desc)
   end
 
+  def show
+    
+  end
 end

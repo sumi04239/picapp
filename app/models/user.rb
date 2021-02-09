@@ -15,7 +15,7 @@ class User < ApplicationRecord
     validates :birthday
     validates :email
     validates :birthday
-    validates :password, format: { with: /\A[a-zA-Z0-9]+\z/, message: 'Password Include both letters and numbers' },
+    validates :password, format: { with: /\A[a-zA-Z0-9]+\z/, message: 'は全角では入力できません。' },
                           length: { minimum: 6 }
   end
   

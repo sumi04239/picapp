@@ -24,22 +24,22 @@ RSpec.describe Advise, type: :model do
       it 'titleが空だと投稿できない' do
         @advise.title = ' '
         @advise.valid?
-        expect(@advise.errors.full_messages).to include("Title can't be blank")
+        expect(@advise.errors.full_messages).to include("Titleを入力してください")
       end
       it 'textが空だと投稿できない' do
         @advise.text = ' '
         @advise.valid?
-        expect(@advise.errors.full_messages).to include("Text can't be blank")
+        expect(@advise.errors.full_messages).to include("Textを入力してください")
       end
       it 'titleが10文字以上じゃないと投稿できない' do
         @advise.title = 'aaa'
         @advise.valid?
-        expect(@advise.errors.full_messages).to include("Title is too short (minimum is 10 characters)")
+        expect(@advise.errors.full_messages).to include("Titleは10文字以上で入力してください")
       end                                               
       it 'textが10文字以上じゃないと投稿できない' do
         @advise.text = 'aaa'
         @advise.valid?
-        expect(@advise.errors.full_messages).to include("Text is too short (minimum is 10 characters)")
+        expect(@advise.errors.full_messages).to include("Textは10文字以上で入力してください")
       end
     end
   end

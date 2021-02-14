@@ -1,0 +1,36 @@
+<div class="goods-search-wrapper">
+
+  <%= render "shared/header" %>
+
+  <div class='goods-content'>
+  
+    <div class="goods-search-main">
+      <h2 class="title">おすすめ商品</h2>
+      <div class="goods-search-box">
+        <ul>
+          <% if @goods.present? %>
+            <% @goods.first(10).each do |item| %>
+              <div class="goods-list">
+                <div class="goods-img">
+                  <li><img src="<%= item['mediumImageUrls'][0] %>"></li>
+                </div>
+                <div class="goods-list-right">
+                  <div class="goods-name">
+                    <li><a href="<%= item['itemUrl'] %>" target="_blank"><%= item['itemName'] %></a></li>
+                  </div>
+                  <div class="goods-price">
+                    <li><%= item['itemPrice'] %>円</li>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+  <%# <%= render "shared/footer" %> 
+
+</div>

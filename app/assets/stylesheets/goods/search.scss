@@ -1,0 +1,51 @@
+.goods-search-wrapper {
+  .goods-content {
+    margin-top: 200px;
+
+  .goods-search-main {
+    width: 80%;
+    margin: 0 auto;
+    
+    
+    .title {
+      border-color: skyblue;
+      
+    }
+    
+  }
+
+  .goods-search-box {
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      
+      .goods-list {
+        width: 40%;
+        padding: 20px;
+        display: flex;
+
+        .goods-img {
+          height: 30px;
+          padding: 30px;
+        }
+
+        .goods-name a {
+          text-decoration-color: darkgoldenrod;
+          text-decoration-style: dashed ;
+          color: black;
+        }
+
+        .goods-price {
+          padding: 5px;
+          font-size: 25px;
+          color: red;
+        }
+      }
+
+    }
+  }
+}
+}

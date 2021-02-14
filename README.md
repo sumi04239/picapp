@@ -66,7 +66,7 @@
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/b36d4b226ea11f02674ee05a9c9fb849.gif)](https://gyazo.com/b36d4b226ea11f02674ee05a9c9fb849)
+[![Image from Gyazo](https://i.gyazo.com/b82130686ac6a2f036ebcd8deab9b7d6.gif)](https://gyazo.com/b82130686ac6a2f036ebcd8deab9b7d6)
 
 <br>
 
@@ -203,8 +203,8 @@ df90c3ee294c910f3123012f7b4243353933c
 | user           | references | foreign_key: null|
 | advise         | references | foreign_key: null|
 
-belongs_to :user
-belongs_to :album
+- belongs_to :user
+- belongs_to :album
 
 ### ローカルでの動作方法
 

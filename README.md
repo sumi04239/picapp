@@ -113,13 +113,6 @@ df90c3ee294c910f3123012f7b4243353933c
 
 [![Image from Gyazo](https://i.gyazo.com/8463f772225796611776fbd9f84a8db3.gif)](https://gyazo.com/8463f772225796611776fbd9f84a8db3)
 
-## 実装予定の機能
-
-- snsアカウント登録機能
-- エラーページ実装
-- 検索機能2 Ransack
-- ハッシュタグ機能
-
 
 ## こだわった点
 

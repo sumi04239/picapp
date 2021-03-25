@@ -55,5 +55,12 @@ RSpec.describe User, type: :model do
       @user.valid?
       expect(@user.errors.full_messages).to include('パスワードは全角では入力できません。')
     end
+    it '重複したメールアドレスなら無効な状態であること' do
+      FactoryBot.create(:user, email: 'aaa@example.com')
+      @user.email = "aaa@example.com"
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Eメールはすでに存在します")
+    end
+
   end
 end

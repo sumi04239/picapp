@@ -1,6 +1,6 @@
 # :sparkles::sparkles:picapp-30464:sparkles::sparkles:
 
-## 概要 
+# 概要 
 - お子様をお持ちの方のための交流ツール
 - お子様の記録を残すためのアプリ
 

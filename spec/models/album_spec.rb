@@ -7,7 +7,7 @@ RSpec.describe Album, type: :model do
 
   describe '写真を投稿' do 
     context '写真の投稿ができる' do
-      it '全てが入力され芸れば投稿できる' do
+      it '全てが入力すれば投稿できる' do
         expect(@album).to be_valid
       end
     it 'titleが10文字以上であれば投稿できる' do 

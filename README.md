@@ -76,9 +76,11 @@
 
    マイページでは現ユーザーの投稿したもののみが閲覧できます。
 
+<br >
 
 <a href="https://gyazo.com/5076d3e4bdf4ee8e4c6d00b4dc9d3d56"><img src="https://i.gyazo.com/5076d3e4bdf4ee8e4c6d00b4dc9d3d56.gif" alt="Image from Gyazo" width="1000"/></a>
 
+<br>
 
 3. 相談内容を投稿できます。投稿したものは相談の一覧ページに表示され、
 

@@ -1,4 +1,4 @@
-# :sparkles:picapp-30464:sparkles::sparkles:
+# :sparkles:picapp-30464:sparkles:
 
 
 

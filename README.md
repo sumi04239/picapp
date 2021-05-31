@@ -1,4 +1,4 @@
-# :sparkles:picapp-30464:sparkles::sparkles:
+# :sparkles:picapp-30464:sparkles:
 
 ## 概要 
 - お子様をお持ちの方のための交流ツール
